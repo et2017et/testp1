@@ -50,5 +50,5 @@ shExpMatch(host,"*.wewear.org")||
 shExpMatch(host,"*.linkedin.com")||
 shExpMatch(host,"*.dropbox.com")
 )
-	{return "PROXY 10.109.246.101:8080";}
+	{return "PROXY 10.109.248.173:8060, 10.109.246.101:8080";}
 }
