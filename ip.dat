@@ -11,7 +11,7 @@ var rules = [
         [
 			"apacssl.hermes-ottoint.com",
 			"eurossl.hermes-ottoint.com",
-			"raw.githubusercontent.com";
+			"raw.githubusercontent.com",
          ], 
         []
     ], 
