@@ -1,54 +1,16 @@
 function FindProxyForURL(url, host)
 {
-if
+IF
 (
 isPlainHostName(host)||
 isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0")||
 isInNet(dnsResolve(host), "172.16.0.0",  "255.240.0.0")||
 isInNet(dnsResolve(host), "192.168.0.0",  "255.255.0.0")||
 isInNet(dnsResolve(host), "127.0.0.0", "255.255.255.0")||
-shExpMatch(host,"apacssl.hermes-ottoint.com")||
+shExpMatch(host,"*.hermes-ottoint.com")||
 shExpMatch(host,"*.blockeddomain.com")
 )
 	{return "DIRECT";}
-if
-(
-shExpMatch(host,"*.appspot.com")||
-shExpMatch(host,"*.google.com")||
-shExpMatch(host,"*.google.com.*")||
-shExpMatch(host,"*.google-analytics.com")||
-shExpMatch(host,"*.googleapis.com")||
-shExpMatch(host,"*.googleapis.com")||
-shExpMatch(host,"*.googlecode.com")||
-shExpMatch(host,"*.googlevideo.com")||
-shExpMatch(host,"*.googleusercontent.com")||
-shExpMatch(host,"*.1e100.net")||
-shExpMatch(host,"*.admob.com")||
-shExpMatch(host,"*.adsense.com")||
-shExpMatch(host,"*.adwords.com")||
-shExpMatch(host,"*.android.com")||
-shExpMatch(host,"*.blogger.com")||
-shExpMatch(host,"*.blogspot.com")||
-shExpMatch(host,"*.googleanalytics.com")||
-shExpMatch(host,"*.googlecode.com")||
-shExpMatch(host,"*.googlesource.com")||
-shExpMatch(host,"*.googledrive.com")||
-shExpMatch(host,"*.googlemaps.com")||
-shExpMatch(host,"*.urchin.com")||
-shExpMatch(host,"*.googleapps.com")||
-shExpMatch(host,"*.goo.gl")||
-shExpMatch(host,"*.ggpht.com")||
-shExpMatch(host,"*.doubleclick.net")||
-shExpMatch(host,"*.gstatic.com")||
-shExpMatch(host,"goo.gl")||
-shExpMatch(host,"*.twimg.com")||
-shExpMatch(host,"*.ytimg.com")||
-shExpMatch(host,"*.ggpht.com")||
-shExpMatch(host,"*.youtube.com")||
-shExpMatch(host,"*.facebook.com")||
-shExpMatch(host,"*.wewear.org")||
-shExpMatch(host,"*.linkedin.com")||
-shExpMatch(host,"*.dropbox.com")
-)
-	{return "PROXY 10.109.248.173:8060, 10.109.246.101:8080";}
+Else
+	{return "PROXY 10.109.248.173:8060, 10.109.246.101:8080", DIRECT;}
 }
