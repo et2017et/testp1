@@ -1,6 +1,9 @@
 function FindProxyForURL(url, host)
 {
-	if (shExpMatch(host, "*.hermes-ottoint.com"))
+	if (
+		shExpMatch(host, "*.hermes-ottoint.com")||
+		shExpMatch(host, "apacssl.hermes-ottoint.com")
+	)
 		return "DIRECT";
 	else
 		return "PROXY 10.109.248.173:8060; 10.109.246.101:8080; DIRECT";
