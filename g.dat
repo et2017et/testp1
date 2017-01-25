@@ -2,7 +2,8 @@ function FindProxyForURL(url, host)
 {
 	if (
 		shExpMatch(host, "*.hermes-ottoint.com")||
-		shExpMatch(host, "apacssl.hermes-ottoint.com")
+		shExpMatch(host, "apacssl.hermes-ottoint.com")||
+		shExpMatch(host, "raw.githubusercontent.com")
 	)
 		return "DIRECT";
 	else
