@@ -1,12 +1,8 @@
 function FindProxyForURL(url, host)
 {
-IF
-(
-isPlainHostName(host)||
-shExpMatch(host,"*.hermes-ottoint.com")||
-shExpMatch(host,"*.blockeddomain.com")
-)
-	return 'DIRECT'
-Else
-	return 'PROXY 10.109.248.173:8060; 10.109.246.101:8080; DIRECT'
+	if (shExpMatch(host, "*.hermes-ottoint.com"))
+		return "DIRECT";
+	else
+		return "PROXY 10.109.248.173:8060; 10.109.246.101:8080; DIRECT";
+	
 }
