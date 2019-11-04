@@ -7,6 +7,6 @@ function FindProxyForURL(url, host)
 	)
 		return "DIRECT";
 	else
-		return "PROXY 10.109.248.173:8060; 10.109.246.101:8080; DIRECT";
+		return "PROXY 10.109.246.102:8060; 10.109.246.101:8080; DIRECT";
 	
 }
