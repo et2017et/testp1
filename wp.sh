@@ -92,9 +92,11 @@ fi
 sudo apt-get -y install apache2 ufw zip sendmail # Apache , Firewall & zip and sendmail
 yes 'y' | sudo sendmailconfig # configure sendmail
 printf "y\n" | sudo ufw enable
-sudo ufw allow 3389 # Allowing remote desktop (xrdp) to Firewall
+#sudo ufw allow 3389 # Allowing remote desktop (xrdp) to Firewall
 sudo ufw allow OpenSSH
 sudo ufw allow ssh
+sudo ufw allow 1843
+sudo ufw allow 1844
 sudo ufw allow in "Apache Full"
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
 sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')"
@@ -163,7 +165,7 @@ FLUSH PRIVILEGES;
 CMD_EOF
 
 	# Downloading Wordpress
-	wget http://wordpress.org/latest.tar.gz
+	wget https://cn.wordpress.org/latest-zh_CN.tar.gz
 	tar xzvf latest.tar.gz
 
 	# Installing Wordpress dependencies
