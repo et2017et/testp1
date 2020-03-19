@@ -165,7 +165,8 @@ FLUSH PRIVILEGES;
 CMD_EOF
 
 	# Downloading Wordpress
-	wget https://cn.wordpress.org/latest-zh_CN.tar.gz
+	wget https://github.com/et2017et/testp1/raw/master/wordpress-5.3.2-zh_CN.tar.gz
+	mv wordpress-5.3.2-zh_CN.tar.gz latest.tar.gz
 	tar xzvf latest.tar.gz
 
 	# Installing Wordpress dependencies
